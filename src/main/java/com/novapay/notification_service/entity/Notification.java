@@ -3,15 +3,13 @@ package com.novapay.notification_service.entity;
 import com.novapay.notification_service.entity.enums.NotificationStatus;
 import com.novapay.notification_service.entity.enums.NotificationType;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "notifications")
+@Builder
 @Setter
 @Getter
 @AllArgsConstructor
