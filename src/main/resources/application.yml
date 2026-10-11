@@ -1,0 +1,29 @@
+spring:
+  application:
+    name: notification-service
+  config:
+    import: "configserver:http://localhost:8089/"
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+
+logging:
+  level:
+    com.novapay.notification_service: INFO
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+info:
+  app:
+    name: "Notification Service"
+    description: "Notification Management Service"
+    version: "1.0"
+
+eureka:
+  instance:
+    prefer-ip-address: true
+    hostname: localhost
